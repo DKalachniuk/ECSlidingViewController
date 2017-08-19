@@ -160,6 +160,9 @@
  */
 @property (nonatomic, strong) UIViewController *underRightViewController;
 
+    
+@property (nonatomic) BOOL canShowWithPanRightController;
+
 
 ///-----------------------------
 /// @name Configuring the Layout

@@ -72,7 +72,9 @@
             if (self.slidingViewController.currentTopViewPosition == ECSlidingViewControllerTopViewPositionCentered && isMovingRight) {
                 [self.slidingViewController anchorTopViewToRightAnimated:YES];
             } else if (self.slidingViewController.currentTopViewPosition == ECSlidingViewControllerTopViewPositionCentered && !isMovingRight) {
-                [self.slidingViewController anchorTopViewToLeftAnimated:YES];
+                if (self.slidingViewController.canShowWithPanRightController) {
+                    [self.slidingViewController anchorTopViewToLeftAnimated:YES];
+                }
             } else if (self.slidingViewController.currentTopViewPosition == ECSlidingViewControllerTopViewPositionAnchoredLeft) {
                 [self.slidingViewController resetTopViewAnimated:YES];
             } else if (self.slidingViewController.currentTopViewPosition == ECSlidingViewControllerTopViewPositionAnchoredRight) {
